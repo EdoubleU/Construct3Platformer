@@ -1,0 +1,26 @@
+This is for a wormlikesprite. You must use a Tilemap for collision detection so it knows when to turn. Doesn't move when off screen to save memory.
+
+
+[Worm]
+----+ En_Worm: Is on-screen
+--------+ En_Worm: Platform is on floor
+--------+ En_Worm: [X] Is mirrored
+---------> En_Worm: Simulate Platform pressing Right
+
+--------+ En_Worm: Platform is on floor
+--------+ En_Worm: Is mirrored
+---------> En_Worm: Simulate Platform pressing Left
+
+--------+ En_Worm: Platform has wall to left
+---------> En_Worm: Set Not mirrored
+
+--------+ En_Worm: Platform has wall to right
+---------> En_Worm: Set Mirrored
+
+--------+ En_Worm: [X] Is overlapping TileMap_Collisions at offset (-24, 4)
+--------+ En_Worm: Is mirrored
+---------> En_Worm: Set Not mirrored
+
+--------+ En_Worm: [X] Is overlapping TileMap_Collisions at offset (16, 4)
+--------+ En_Worm: [X] Is mirrored
+---------> En_Worm: Set Mirrored
